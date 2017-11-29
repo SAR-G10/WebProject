@@ -1,0 +1,211 @@
+
+
+@charset "utf-8";
+
+
+
+
+@font-face {
+font-family: "Clock";
+font-style: normal;
+font-weight: 400;
+font-stretch: normal;
+src: url("./clock.woff") format("woff");
+}
+
+@font-face {
+font-family: "Main";
+font-style: normal;
+font-weight: 400;
+font-stretch: normal;
+src: url("./MainFont.woff") format("woff");
+}
+
+html { height: 100%; }
+
+table{
+font-family:Clock;
+text-align: center;
+margin: auto;
+table-layout:fixed;
+}
+
+.numbers{
+font-size: 1000%;
+height: 150px;
+color: rgb(155,155,155);
+}
+
+.textNumbers{
+font-size: 200%;
+color: rgb(155,155,155);
+}
+
+
+.timer{
+height:100%;
+display:table-cell;
+vertical-align:middle;
+text-align:center;
+}
+
+.numbers>td>div{ 	
+min-width: 175px;
+vertical-align: middle; 
+}
+
+.numbers td	{	
+height: 150px;	
+}
+
+.wrapperTimer{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+height:100%;
+padding: 0 20px;display:table;
+width:100%;
+}
+
+.mainWrapper{ 
+padding: 50px 0;   
+position: absolute; 
+top: 50px;
+bottom: 0;
+left: 0;   right: 0; }
+
+header{
+background-color: rgb(40,40,40);
+width:100%;
+box-sizing: border-box;
+padding: 15px;
+height: 52px;
+color: rgb(255,255,255);	
+font-weight: bold;
+
+}
+
+body	{ 
+background: rgb(0, 0, 6); 
+margin: 0; 
+font-family: Main;
+width: 100%;
+height:100%;
+min-height: 100%;
+padding: 0;
+}	
+
+#headerWrapper{
+margin-left: 10%;
+margin-right: 10%; 
+text-align: center;
+}
+
+#headerMenuBar>ul>li>a>div	{
+padding-left: 25px;
+padding-right:  25px;
+width: 100px;
+}
+
+#headerMenuBar>ul>li>a	{
+color: rgb(255,255,255);
+text-decoration: none;
+}
+
+#title{
+float: left;
+}
+
+#headerMenuBar{
+float: right;
+display: flex;               /* establish flex container */
+align-items: center;   
+text-align: justify;
+width: 400px;
+}
+
+ul 					{
+margin: 0;
+}
+
+ul > li {
+display: inline-block;
+/* You can also add some margins here to make it look prettier */
+*display:inline;
+/* this fix is needed for IE7- */
+}
+
+/* Dropdown Button */
+.themeDropDownBtn {
+font-size: 16px;
+border: none;
+cursor: pointer;
+background-color: rgb(40,40,40);
+color: rgb(255,255,255);
+font-weight: bold;
+border: none;
+cursor:pointer;
+overflow: hidden;
+outline:none;
+width: 100px;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropDownWrapper {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDownContent {
+display: none;
+position: absolute;
+background-color: rgb(20,20,20);
+min-width: 100px;
+box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropDownContent button {
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropDownContent button:hover {background-color: rgb(100,100,100);}
+
+/* Show the dropdown menu on hover */
+.dropDownWrapper:hover .dropDownContent{
+display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropDownWrapper:hover .themeDropDownBtn {
+}
+
+.dropDownBtnDropped {
+width: 100%;
+text-align: left;
+padding: 10px 10px 10px 10px;
+background-color: Transparent;
+background-repeat:no-repeat;
+border: none;
+cursor:pointer;
+overflow: hidden;
+outline:none;
+}
+
+footer {
+position:fixed;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 1rem;
+color: rgb(200,200,200);
+background-color: rgb(40,40,40);
+text-align: center;
+}

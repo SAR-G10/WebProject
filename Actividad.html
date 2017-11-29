@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link id="css" rel='stylesheet' type='text/css' href='style_light.css' />
+	</head>
+	<body>
+		<header>
+			<div id="headerWrapper">
+				<div class="title-config">
+					<button class="dropDownTitle-config"> Star Wars: The Last Jedi</button>
+						<div class="dropDownContent">
+							<button class="dropDownBtnDropped" id="btnLight"> Theme </button>
+							<button class="dropDownBtnDropped" id="btnDark"> dark </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="mainWrapper">
+			<div class="wrapperTimer ">
+				<div class="timer">
+					<table>
+						<tr class="numbers">
+							<td>
+								<div id="timerSpanDays"></div>
+							</td>
+							<td>:</td>
+							<td>
+								<div id="timerSpanHours"></div>
+							</td>
+							<td>:</td>
+							<td>
+								<div id="timerSpanMinutes"></div>
+							</td>
+							<td>:</td>
+							<td>
+								<div id="timerSpanSeconds"></div>
+							</td>
+						</tr >
+						<tr class= "textNumbers">
+							<td>
+								Days
+							</td>
+							<td></td>
+							<td>
+								Hours
+							</td>
+							<td></td>
+							<td>
+								Minutes
+							</td>
+							<td></td>
+							<td>
+								Seconds
+							</td>					
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			(c) Haritz Saiz &amp; Jurgi Sarasola
+		</footer>
+	</body>
+
+	<!--import jquery lib desde el servidor de google-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+	$("#btnDark").click(function() {
+   		$("#css").attr("href", "style_dark.css");
+	});
+
+	$("#btnLight").click(function() {
+   		$("#css").attr("href", "style_light.css");
+	});
+
+	var date1 = new Date();
+	var date2 = new Date("December 15, 2017 21:30:00");
+	var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+	diasDecimal=(timeDiff / (1000 * 3600 * 24)).toString()
+	diasDecimalSplited=diasDecimal.split(".");
+	dias=diasDecimalSplited[0];
+
+	horasDecimal=parseFloat("0."+diasDecimalSplited[1])*24
+	horasDecimalSplited=horasDecimal.toString().split(".")
+	horas=horasDecimalSplited[0];
+
+	minutosDecimal=parseFloat("0."+horasDecimalSplited[1])*60
+	minutosDecimalSplited=minutosDecimal.toString().split(".")
+	minutos=minutosDecimalSplited[0];
+
+	segundosDecimal=parseFloat("0."+minutosDecimalSplited[1])*60
+	segundosDecimalSplited=segundosDecimal.toString().split(".")
+	segundos=segundosDecimalSplited[0];
+
+
+	if (parseInt(dias)<10) {
+		$("#timerSpanDays").text(0+dias);
+	} else{
+		$("#timerSpanDays").text(dias);
+	}
+
+	if (horas<10) {
+		$("#timerSpanHours").text(0+horas);
+	} else{
+		$("#timerSpanHours").text(horas);
+	}
+
+	if (minutos<10) {
+		$("#timerSpanMinutes").text(0+minutos);
+	} else{
+		$("#timerSpanMinutes").text(minutos);
+	}
+
+	if (segundos<10) {
+		$("#timerSpanSeconds").text(0+segundos);
+	} else{
+		$("#timerSpanSeconds").text(segundos);
+	}
+
+		setInterval(function(){
+			if ( parseInt($("#timerSpanSeconds").text())<=10  && parseInt($("#timerSpanSeconds").text()) > 0 ) {
+				var sec = (parseInt($("#timerSpanSeconds").text())-1).toString();
+				$("#timerSpanSeconds").text( 0+sec);
+			}
+			else if ( parseInt($("#timerSpanSeconds").text())>10) {
+				$("#timerSpanSeconds").text( parseInt($("#timerSpanSeconds").text())-1);
+
+			}
+			else{
+				$("#timerSpanSeconds").text( "59" );
+				if ( parseInt($("#timerSpanMinutes").text())<=10  && parseInt($("#timerSpanMinutes").text()) > 0 ) {
+					var sec = (parseInt($("#timerSpanMinutes").text())-1).toString();
+					$("#timerSpanMinutes").text( 0+sec);
+				}
+				else if ( parseInt($("#timerSpanMinutes").text())>10) {
+					$("#timerSpanMinutes").text( parseInt($("#timerSpanMinutes").text())-1);
+
+				}else{
+					$("#timerSpanMinutes").text( "59" );
+					if ( parseInt($("#timerSpanHours").text())<=10  && parseInt($("#timerSpanHours").text()) > 0 ) {
+						var sec = (parseInt($("#timerSpanHours").text())-1).toString();
+						$("#timerSpanHours").text( 0+sec);
+					}
+					else if ( parseInt($("#timerSpanHours").text())>10) {
+						$("#timerSpanHours").text( parseInt($("#timerSpanHours").text())-1);
+					}
+					else{
+						$("#timerSpanHours").text( "24" );
+						if ( parseInt($("#timerSpanDays").text())<=10  && parseInt($("#timerSpanDays").text()) > 0 ) {
+							var sec = (parseInt($("#timerSpanDays").text())-1).toString();
+							$("#timerSpanDays").text( 0+sec);
+						}
+						else if ( parseInt($("#timerSpanDays").text())<=31) {
+							$("#timerSpanDays").text( parseInt($("#timerSpanDays").text())-1);
+						}						
+					}
+				}
+			}
+		}, 1000);//1seg
+		
+	</script>
+</html>
