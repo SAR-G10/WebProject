@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <form name="fregistrar" id="freg" action="" method="">
+            Email*: </br><input type="email" name="email" id="email" size="50" placeholder="email@host.dom" required /></br>
+            Nombre*: </br><input type="text" name="nombre" id="name" size="50" pattern="([A-Za-z]{1,}\s){1,4}" required /></br>
+            Apellidos*: </br><input type="text" name="apellidos" id="lastNames" size="50" pattern="([A-Za-z]{1,}\s){1,5}" required /></br>
+            Username*: </br><input type="text" name="username" id="nick" size="50" pattern="^(([a-zA-Z0-9\_\-]{1,}))$" required /></br>
+            Password*: </br><input type="password" name="password" id="pass" size="50" pattern="^[a-zA-Z0-9!@#$%\^&\*\?_~\/\-\\\_]{6,20}$/" required /></br>
+            Repetir password*:</br><input type="password" name="rep_password" id="rep_pass" size="50" pattern="^[a-zA-Z0-9!@#$%\^&\*\?_~\/\-\\\_]{6,20}$/" required /></br>
+            <input type="submit" name="submit" id="submit" value="Enviar" align="center" style="margin-left: 5%"/>
+            <input type="reset" value="reset" id="rst" value="Limpiar"/></br></br>
+        </form>
+    </div>
+</body>
+</html>
