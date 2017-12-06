@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<actividades ult_id="1">
+  <actividad usuario="haritz">
+    <fecha>Wed, 11 Dec 2017 14:58:19 +0000</fecha>
+    <titulo>Entrega trabajo SAR</titulo>
+    <descripcion> Hay que entregar la practica general 3 </descripcion>
+    <pathImg subida="no"/>
+    <diereccionMaps subida="no"/>
+  </actividad>
+  <actividad usuario="vesko">
+    <fecha>19-12-2017</fecha>
+    <titulo>tarea</titulo>
+    <descripcion>Descripcion</descripcion>
+  </actividad>
+  <actividad usuario="veskof" id="1">
+    <fecha>19-12-2017</fecha>
+    <titulo>tarea</titulo>
+    <descripcion>Descripcion</descripcion>
+    <pathImg subida="si">fotos/1.png</pathImg>
+    <direccionMaps subida="no"/>
+  </actividad>
+</actividades>

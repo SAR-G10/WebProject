@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<usuarios>
+  <usuario>
+    <email>jperez001@ikasle.ehu.es</email>
+    <nombre>Juan</nombre>
+    <apellidos>Perez</apellidos>
+    <username>jperez</username>
+    <password>Qwerty1234</password>
+  </usuario>
+  <usuario>
+    <email>veskof@gmail.com</email>
+    <nombre>Vesko</nombre>
+    <apellidos>Veselin</apellidos>
+    <username>veskof</username>
+    <password>Qwerty1234</password>
+  </usuario>
+  <usuario>
+    <email>sml@gmail.com</email>
+    <nombre>sebas</nombre>
+    <apellidos>mol</apellidos>
+    <username>sml</username>
+    <password>Qwerty1234</password>
+  </usuario>
+  <usuario>
+    <email>sml@gmail.com</email>
+    <nombre>Sebas</nombre>
+    <apellidos>Mol</apellidos>
+    <username>sbs</username>
+    <password>Qwerty</password>
+  </usuario>
+</usuarios>
